@@ -1,0 +1,43 @@
+Camera Rental Application
+
+Application Flow:
+
+The code provided is a simple camera rental application implemented in Java. It consists of several classes: Camera, Admin, User, and the main class CameraRentalApp.
+
+Here is a step-by-step documentation of the code:
+
+1.The Camera class represents a camera object with properties such as id, brand, model, price, and availability. It has a constructor to initialize these properties and getter and setter methods to access and modify the properties.
+
+2.The Admin class represents the administrator of the camera rental system. It has a username and password property, and a method authenticate to check if the provided username and password match the admin's credentials.
+
+3.The User class represents a user of the camera rental system. It has properties such as username, password, walletBalance, and rentedCameras. The walletBalance represents the user's account balance, and rentedCameras is an ArrayList to store the cameras rented by the user. It has a constructor to initialize the username and password, and getter and setter methods for accessing and modifying the properties.
+
+4.The CameraRentalApp class is the main class that contains the main method. It initializes an ArrayList called cameraList to store the available cameras, creates an instance of the Admin class, and declares a variable currentUser to keep track of the logged-in user.
+
+5.The main method calls the initializeCameras method to populate the cameraList with some sample cameras and then calls the welcomepage method to start the application.
+
+6.The welcomepage method is the entry point of the application. It displays a menu with options for the user to choose between admin and user modes. It uses a loop to keep the user in the menu until they choose to exit the application.
+
+7.The adminLogin method prompts the user to enter the admin username and password. It calls the authenticate method of the Admin class to validate the credentials. If the credentials are valid, it displays a success message; otherwise, it displays an error message and exits the application.
+
+8.The adminMenu method displays the admin menu with options such as adding a camera, removing a camera, viewing all cameras, and going back to the previous menu. It uses a loop to keep the admin in the menu until they choose to go back.
+
+9.The addCamera method prompts the admin to enter the details of a camera (ID, brand, model, and price) and creates a new Camera object with the provided information. It adds the camera to the cameraList and displays a success message.
+
+10.The removeCamera method prompts the admin to enter the ID of the camera to remove. It searches for the camera in the cameraList based on the ID and removes it if found. It displays a success message if the camera is removed; otherwise, it displays an error message.
+
+11.The viewAllCameras method displays all the available cameras and rented cameras in the cameraList. It uses a loop to iterate through the list and prints the details of each camera.
+
+12.The userLogin method prompts the user to enter their username and password. It creates a new User object with the provided credentials and assigns it to the currentUser variable. It displays a success message after successful login.
+
+13.The userMenu method displays the user menu with options such as viewing rented cameras, renting a camera, viewing all cameras, managing the wallet balance, and exiting the application. It uses a loop to keep the user in the menu until they choose to exit.
+
+14.The viewRentedCameras method retrieves the list of rented cameras for the current user and displays the details of each rented camera. If the list is empty, it displays a message indicating that the user hasn't rented any cameras yet.
+
+15.The rentCamera method prompts the user to enter the ID of the camera they want to rent. It searches for the camera in the cameraList based on the ID and checks if it is available. If the camera is available and the user has sufficient balance in their wallet, the camera is rented, and the necessary changes are made to the user's wallet balance and the camera's availability. It displays a success message if the camera is rented; otherwise, it displays an error message.
+
+16.The myWallet method displays the current wallet balance of the user. It prompts the user if they want to deposit more amount and, if yes, allows them to enter the amount to deposit. The user's wallet balance is updated accordingly, and a success message is displayed.
+
+17.The initializeCameras method adds some sample camera objects to the cameraList at the start of the application.
+
+That's a brief overview of the provided code and its functionality. It allows admins to manage cameras (add, remove, view), and users to view available cameras, rent cameras, and manage their wallet balance.
